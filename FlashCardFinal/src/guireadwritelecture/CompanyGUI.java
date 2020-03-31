@@ -35,10 +35,9 @@ public class CompanyGUI extends javax.swing.JFrame {
 
     public void showRecord() {
         this.idSpinner.setValue(contactList.get(index).getId());
-        this.fnameField.setText(contactList.get(index).getFname());
-        this.lnameField.setText(contactList.get(index).getLname());
-        this.companyField.setText(contactList.get(index).getCompany());
-        this.emailField.setText(contactList.get(index).getEmail());
+        this.fnameField.setText(contactList.get(index).getTerm());
+        this.lnameField.setText(contactList.get(index).getDef());
+        
         
         this.setTitle("Record # " + index + " of " + contactList.size());
     }
@@ -49,14 +48,13 @@ public class CompanyGUI extends javax.swing.JFrame {
     
     public void updateRecord(){
         contactList.get(index).setId((int) this.idSpinner.getValue());
-        contactList.get(index).setFname(this.fnameField.getText());
-        contactList.get(index).setLname(this.lnameField.getText());
-        contactList.get(index).setCompany(this.companyField.getText());
-        contactList.get(index).setEmail(this.emailField.getText());
+        contactList.get(index).setTerm(this.fnameField.getText());
+        contactList.get(index).setDef(this.lnameField.getText());
+        
         
     }
     public void writeToDisk(){
-        String fileName = "c:\\data\\company.csv";
+        String fileName = "Documents\\GitHub\\FinalFlashCard\\FlashCards.csv";
         String outputLine = "";
         File outFile = new File(fileName);
         
@@ -64,8 +62,8 @@ public class CompanyGUI extends javax.swing.JFrame {
             FileWriter companyWrite = new FileWriter(outFile);
             
             for(int x=0;x<contactList.size();x++){
-                outputLine = String.format("%d,%s,%s,%s,%s\n",contactList.get(x).getId(),
-                        contactList.get(x).getFname(),contactList.get(x).getLname(),contactList.get(x).getCompany(),contactList.get(x).getEmail());
+                outputLine = String.format("%d,%s,%s\n",contactList.get(x).getId(),
+                        contactList.get(x).getTerm(),contactList.get(x).getDef());
                 companyWrite.write(outputLine);
             }//end of for
             companyWrite.flush();
@@ -80,7 +78,7 @@ public class CompanyGUI extends javax.swing.JFrame {
     public CompanyGUI() {
         initComponents();
         fs = FileSystems.getDefault();
-        pathToFile = fs.getPath("c:\\data\\company.csv");
+        pathToFile = fs.getPath("Documents\\GitHub\\FinalFlashCard\\FlashCards.csv");
         Flashcard aPerson;
         String line = "";
         
@@ -95,10 +93,9 @@ public class CompanyGUI extends javax.swing.JFrame {
                 
                 try {
                     aPerson.setId(Integer.parseInt(records[0]));
-                    aPerson.setFname(records[1]);
-                    aPerson.setLname(records[2]);
-                    aPerson.setCompany(records[3]);
-                    aPerson.setEmail(records[4]);
+                    aPerson.setTerm(records[1]);
+                    aPerson.setDef(records[2]);
+                    
                     
                     contactList.add(aPerson);
                 } catch (NumberFormatException numberFormatException) {
