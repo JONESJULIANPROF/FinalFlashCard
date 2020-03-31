@@ -9,15 +9,15 @@ package guireadwritelecture;
  *
  * @author Brad
  */
-public class Company {
+public class Flashcard {
     private int id;
     private String fname,lname,company,email;
     //setter,getters,both constructors,toString
 
-    public Company() {
+    public Flashcard() {
     }
 
-    public Company(int id, String fname, String lname, String company, String email) {
+    public Flashcard(int id, String fname, String lname, String company, String email) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;

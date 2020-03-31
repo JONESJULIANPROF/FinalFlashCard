@@ -30,7 +30,7 @@ public class CompanyGUI extends javax.swing.JFrame {
     Path pathToFile;
     InputStream companyIn = null;
     BufferedReader companyReader;
-    ArrayList<Company> contactList = new ArrayList<Company>();
+    ArrayList<Flashcard> contactList = new ArrayList<Flashcard>();
     int index = 0;
 
     public void showRecord() {
@@ -81,7 +81,7 @@ public class CompanyGUI extends javax.swing.JFrame {
         initComponents();
         fs = FileSystems.getDefault();
         pathToFile = fs.getPath("c:\\data\\company.csv");
-        Company aPerson;
+        Flashcard aPerson;
         String line = "";
         
         try {
@@ -91,7 +91,7 @@ public class CompanyGUI extends javax.swing.JFrame {
             
             while ((line = companyReader.readLine()) != null) {
                 String records[] = line.split(",");
-                aPerson = new Company();
+                aPerson = new Flashcard();
                 
                 try {
                     aPerson.setId(Integer.parseInt(records[0]));
