@@ -11,18 +11,16 @@ package guireadwritelecture;
  */
 public class Flashcard {
     private int id;
-    private String fname,lname,company,email;
+    private String term, def;
     //setter,getters,both constructors,toString
 
     public Flashcard() {
     }
 
-    public Flashcard(int id, String fname, String lname, String company, String email) {
+    public Flashcard(int id, String term, String def) {
         this.id = id;
-        this.fname = fname;
-        this.lname = lname;
-        this.company = company;
-        this.email = email;
+        this.term = term;
+        this.def = def;
     }
 
     public int getId() {
@@ -33,41 +31,22 @@ public class Flashcard {
         this.id = id;
     }
 
-    public String getFname() {
-        return fname;
+    public String getTerm() {
+        return term;
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setTerm(String term) {
+        this.term = term;
     }
 
-    public String getLname() {
-        return lname;
+    public String getDef() {
+        return def;
     }
 
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setDef(String def) {
+        this.def = def;
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    @Override
-    public String toString() {
-        return "Company{" + "id=" + id + ", fname=" + fname + ", lname=" + lname + ", company=" + company + ", email=" + email + '}';
-    }
+    
     
 }
