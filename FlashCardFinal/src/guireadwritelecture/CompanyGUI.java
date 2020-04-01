@@ -54,7 +54,7 @@ public class CompanyGUI extends javax.swing.JFrame {
         
     }
     public void writeToDisk(){
-        String fileName = "Documents\\GitHub\\FinalFlashCard\\FlashCards.csv";
+        String fileName = "c:\\data\\FlashCards.csv";
         String outputLine = "";
         File outFile = new File(fileName);
         
@@ -78,7 +78,7 @@ public class CompanyGUI extends javax.swing.JFrame {
     public CompanyGUI() {
         initComponents();
         fs = FileSystems.getDefault();
-        pathToFile = fs.getPath("Documents\\GitHub\\FinalFlashCard\\FlashCards.csv");
+        pathToFile = fs.getPath("c:\\data\\FlashCards.csv");
         Flashcard aPerson;
         String line = "";
         
