@@ -34,9 +34,9 @@ public class CompanyGUI extends javax.swing.JFrame {
     int index = 0;
 
     public void showRecord() {
-        this.idSpinner.setValue(contactList.get(index).getId());
-        this.fnameField.setText(contactList.get(index).getTerm());
-        this.lnameField.setText(contactList.get(index).getDef());
+        //this.idSpinner.setValue(contactList.get(index).getId());
+        this.newTermField.setText(contactList.get(index).getTerm());
+        this.newDefField.setText(contactList.get(index).getDef());
         
         
         this.setTitle("Record # " + index + " of " + contactList.size());
@@ -47,9 +47,9 @@ public class CompanyGUI extends javax.swing.JFrame {
      */
     
     public void updateRecord(){
-        contactList.get(index).setId((int) this.idSpinner.getValue());
-        contactList.get(index).setTerm(this.fnameField.getText());
-        contactList.get(index).setDef(this.lnameField.getText());
+        //contactList.get(index).setId((int) this.idSpinner.getValue());
+        contactList.get(index).setTerm(this.newTermField.getText());
+        contactList.get(index).setDef(this.newDefField.getText());
         
         
     }
