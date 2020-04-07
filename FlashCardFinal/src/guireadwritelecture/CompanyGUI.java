@@ -123,23 +123,16 @@ public class CompanyGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dataPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        idSpinner = new javax.swing.JSpinner();
-        jLabel2 = new javax.swing.JLabel();
-        fnameField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        lnameField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        emailField = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        companyField = new javax.swing.JTextField();
         firstButton = new javax.swing.JButton();
         prevButton = new javax.swing.JButton();
         nextButton = new javax.swing.JButton();
         lastButton = new javax.swing.JButton();
-        newButton = new javax.swing.JButton();
-        deleteButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        outputLabel = new javax.swing.JLabel();
+        newTermField = new javax.swing.JTextField();
+        newDefField = new javax.swing.JTextField();
+        updateButton = new javax.swing.JButton();
+        newFlashcardButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Record # ");
@@ -148,39 +141,6 @@ public class CompanyGUI extends javax.swing.JFrame {
                 formWindowClosing(evt);
             }
         });
-
-        dataPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        dataPanel.setMinimumSize(new java.awt.Dimension(400, 400));
-        dataPanel.setPreferredSize(new java.awt.Dimension(400, 400));
-        dataPanel.setLayout(new java.awt.GridLayout(5, 2));
-
-        jLabel1.setText("ID Number");
-        dataPanel.add(jLabel1);
-        dataPanel.add(idSpinner);
-
-        jLabel2.setText("First Name");
-        dataPanel.add(jLabel2);
-
-        fnameField.setText("jTextField1");
-        dataPanel.add(fnameField);
-
-        jLabel3.setText("Last Name");
-        dataPanel.add(jLabel3);
-
-        lnameField.setText("jTextField2");
-        dataPanel.add(lnameField);
-
-        jLabel4.setText("Email");
-        dataPanel.add(jLabel4);
-
-        emailField.setText("jTextField3");
-        dataPanel.add(emailField);
-
-        jLabel5.setText("Company");
-        dataPanel.add(jLabel5);
-
-        companyField.setText("jTextField4");
-        dataPanel.add(companyField);
 
         firstButton.setText("|<");
         firstButton.addActionListener(new java.awt.event.ActionListener() {
@@ -210,61 +170,97 @@ public class CompanyGUI extends javax.swing.JFrame {
             }
         });
 
-        newButton.setText("*");
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        deleteButton.setForeground(new java.awt.Color(255, 51, 51));
-        deleteButton.setText("X");
+        outputLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        outputLabel.setText("Term");
+        outputLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                outputLabelMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(outputLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(outputLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+        );
+
+        newTermField.setText("Term");
+
+        newDefField.setText("Definition");
+
+        updateButton.setText("Update");
+
+        newFlashcardButton.setText("New Card");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(187, 187, 187)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(dataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(firstButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(prevButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nextButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lastButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(newTermField, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(newDefField, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(firstButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(prevButton))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(newButton)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nextButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lastButton))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addComponent(deleteButton)))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                        .addComponent(updateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(newFlashcardButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(192, 192, 192))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(dataPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(newTermField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(newDefField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(updateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(newFlashcardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstButton)
                     .addComponent(prevButton)
                     .addComponent(nextButton)
                     .addComponent(lastButton))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(newButton)
-                    .addComponent(deleteButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        updateRecord();
+        writeToDisk(); //save on exit
+    }//GEN-LAST:event_formWindowClosing
+
+    private void lastButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastButtonActionPerformed
+        // TODO add your handling code here:
+        updateRecord();
+        index = contactList.size()-1;
+        showRecord();
+    }//GEN-LAST:event_lastButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
         // TODO add your handling code here:
@@ -291,18 +287,9 @@ public class CompanyGUI extends javax.swing.JFrame {
         showRecord();
     }//GEN-LAST:event_firstButtonActionPerformed
 
-    private void lastButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastButtonActionPerformed
+    private void outputLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_outputLabelMouseClicked
         // TODO add your handling code here:
-        updateRecord();
-        index = contactList.size()-1;
-        showRecord();
-    }//GEN-LAST:event_lastButtonActionPerformed
-
-    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        // TODO add your handling code here:
-        updateRecord();
-        writeToDisk(); //save on exit
-    }//GEN-LAST:event_formWindowClosing
+    }//GEN-LAST:event_outputLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -340,22 +327,15 @@ public class CompanyGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField companyField;
-    private javax.swing.JPanel dataPanel;
-    private javax.swing.JButton deleteButton;
-    private javax.swing.JTextField emailField;
     private javax.swing.JButton firstButton;
-    private javax.swing.JTextField fnameField;
-    private javax.swing.JSpinner idSpinner;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton lastButton;
-    private javax.swing.JTextField lnameField;
-    private javax.swing.JButton newButton;
+    private javax.swing.JTextField newDefField;
+    private javax.swing.JButton newFlashcardButton;
+    private javax.swing.JTextField newTermField;
     private javax.swing.JButton nextButton;
+    private javax.swing.JLabel outputLabel;
     private javax.swing.JButton prevButton;
+    private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
 }
