@@ -319,14 +319,14 @@ public class FlashcardGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (reviewToggle == true) {
 
-            reviewIndex = reviewCardList.size() + 1;
+            reviewIndex = reviewCardList.size() -1 ;
             showRecord();
             outputLabel.setText(reviewCardList.get(reviewIndex).getTerm());
             toggle = true;
         } else {
 
             updateRecord();
-            index = cardList.size() + 1;
+            index = cardList.size() -1 ;
             outputLabel.setText(cardList.get(index).getTerm());
             toggle = true;
             showRecord();
